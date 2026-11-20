@@ -1,0 +1,6 @@
+{
+  "name": "Pinloca",
+  "description": "Cari kegiatan, temukan teman. Platform komunitas untuk menemukan kegiatan kebugaran dan wellness serta tempat menarik di Bali.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": []
+}

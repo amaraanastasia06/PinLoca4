@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #FAFAF7;
+    color: #1F2937;
+  }
+}
+
+/* Custom scrollbar for desktop side panels and sheets */
+.pinloca-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.pinloca-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.pinloca-scroll::-webkit-scrollbar-thumb {
+  background: rgba(31, 41, 55, 0.14);
+  border-radius: 9999px;
+}
+
+.pinloca-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(31, 41, 55, 0.28);
+}
+
+/* Hide scrollbars for horizontal chip strips */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Leaflet overrides to keep markers crisp and z-index safe inside our layout */
+.leaflet-container {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  background-color: #EAE9E4 !important;
+  z-index: 1;
+}
+
+.pinloca-cluster-icon {
+  background: transparent;
+  border: none;
+}
+
+.pinloca-custom-pin {
+  background: transparent;
+  border: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
